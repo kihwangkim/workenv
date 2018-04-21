@@ -2,49 +2,30 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-"
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
 " let Vundle manage Vundle, required
-"Plugin 'VundleVim/Vundle.vim'
-"
-"
-"
-"
-"Plugin 'bling/vim-airline'
-"
-"Plugin 'jiangmiao/auto-pairs'
-"
-"Plugin 'shougo/unite.vim'
-"Plugin 'Shougo/vimproc.vim'
-"Plugin 'shougo/vimshell.vim'
-"
-"
-"Plugin 'valloric/youcompleteme'
-"
-"
-"call vundle#end()            " required
-"filetype plugin indent on    " required
-"
-"
-"
-"let g:airline#extensions#tabline#enabled = 1
-"
-"let g:vimshell_prompt_expr = 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
-"let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
-"
-"
-"
-" youcompleteme
-"
-"let g:ycm_python_binary_path = '/usr/bin/python3'
-"
-"
-"
-"
-"map <F2> :Unite file -vertical -toggle<CR>
-"map <F3> :Unite buffer -vertical -toggle<CR>
-"nmap <F4> :VimShellCreate<CR>
+Plugin 'VundleVim/Vundle.vim'
+
+
+
+Plugin 'bling/vim-airline'
+
+Plugin 'shougo/unite.vim'
+
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+let g:airline#extensions#tabline#enabled = 1
+
+
+map <F2> :Unite file -vertical -toggle<CR>
+map <F3> :Unite buffer -vertical -toggle<CR>
+
+
 
 
 " buffer
@@ -93,6 +74,11 @@ set background=dark
 "set smartindent
 
 set autoread
+
+
+
+
+au BufNewFile,BufRead *.tpp set filetype=cpp
 
 
 syntax on
