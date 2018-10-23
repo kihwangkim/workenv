@@ -33,8 +33,6 @@ map <F3> :Unite buffer -vertical -toggle<CR>
 
 " tab
 map <C-o> :tabnew<CR>
-map <C-n> :tabn<CR>
-map <C-p> :tabp<CR>
 map <SPACE> gt
 "map <S-SPACE> gT
 
@@ -125,5 +123,11 @@ if has("cscope")
     nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
     nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
     nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+
+	map <C-k> :cp<CR>
+	map <C-l> :cn<CR>
+	map <C-j> :cw<CR>
+	map <C-g> :set cscopequickfix=s-,c-,d-,i-,t-,e-<CR>
+	map <C-h> :set cscopequickfix=s0,c0,d0,i0,t0,e0<CR>
 endif
 
