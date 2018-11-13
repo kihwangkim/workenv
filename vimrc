@@ -1,29 +1,29 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-
-
-Plugin 'bling/vim-airline'
-
-Plugin 'shougo/unite.vim'
-
-
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-
-let g:airline#extensions#tabline#enabled = 1
-
-
-map <F2> :Unite file -vertical -toggle<CR>
-map <F3> :Unite buffer -vertical -toggle<CR>
+"set nocompatible              " be iMproved, required
+"filetype off                  " required
+"
+"" set the runtime path to include Vundle and initialize
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"
+"" let Vundle manage Vundle, required
+"Plugin 'VundleVim/Vundle.vim'
+"
+"
+"
+"Plugin 'bling/vim-airline'
+"
+"Plugin 'shougo/unite.vim'
+"
+"
+"call vundle#end()            " required
+"filetype plugin indent on    " required
+"
+"
+"let g:airline#extensions#tabline#enabled = 1
+"
+"
+"map <F2> :Unite file -vertical -toggle<CR>
+"map <F3> :Unite buffer -vertical -toggle<CR>
 
 
 
