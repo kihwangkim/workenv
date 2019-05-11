@@ -34,7 +34,7 @@
 " tab
 map <C-o> :tabnew<CR>
 map <SPACE> gt
-"map <S-SPACE> gT
+map , gT
 
 
 " split view
