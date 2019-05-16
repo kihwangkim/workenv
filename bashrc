@@ -127,7 +127,6 @@ export TERM="xterm-256color"
 export TMOUT=0
 
 # my alias
-alias g1='cd ~/logging_for_multicores/mariadb/run/bin'
-alias g2='cd ~/mariadb_vanilla/mariadb_eleda/mariadb/run/bin'
+alias cdl='cd "$(\ls -1dt ./*/ | head -n 1)"'
 
 set -o vi
