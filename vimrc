@@ -97,14 +97,14 @@ if has("cscope")
     endif
     set cscopeverbose
 
-    nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-    nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nmap <C-\>d :cs find d ^<C-R>=expand("<cword>")<CR><CR>
+    nmap <C-n>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-n>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-n>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-n>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-n>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-n>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-n>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-n>d :cs find d ^<C-R>=expand("<cword>")<CR><CR>
 
     nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
     nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
