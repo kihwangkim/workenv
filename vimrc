@@ -52,7 +52,7 @@ map <S-Right> <C-d>
 nmap <Up> <Up>zz
 nmap <Down> <Down>zz
 
-nmap <Backspace> <C-t>
+"nmap <Backspace> <C-t>
 
 
 set hlsearch " searching pattern highlighting
@@ -129,5 +129,6 @@ if has("cscope")
 	map <C-j> :cw<CR>
 	map <C-g> :set cscopequickfix=s-,c-,d-,i-,t-,e-<CR>
 	map <C-h> :set cscopequickfix=s0,c0,d0,i0,t0,e0<CR>
+	nmap <C-n>p <C-t>
 endif
 
