@@ -128,5 +128,6 @@ export TMOUT=0
 
 # my alias
 alias cdl='cd "$(\ls -1dt ./*/ | head -n 1)"'
+alias cda='cd "$(\ls -1da ./*/ | head -n 1)"'
 
 set -o vi
