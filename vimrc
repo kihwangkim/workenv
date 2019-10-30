@@ -1,29 +1,63 @@
-"set nocompatible              " be iMproved, required
-"filetype off                  " required
-"
-"" set the runtime path to include Vundle and initialize
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-"
-"" let Vundle manage Vundle, required
-"Plugin 'VundleVim/Vundle.vim'
-"
-"
-"
-"Plugin 'bling/vim-airline'
-"
-"Plugin 'shougo/unite.vim'
-"
-"
-"call vundle#end()            " required
-"filetype plugin indent on    " required
-"
-"
-"let g:airline#extensions#tabline#enabled = 1
-"
-"
-"map <F2> :Unite file -vertical -toggle<CR>
-"map <F3> :Unite buffer -vertical -toggle<CR>
+" $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" :PluginInstall or $ vim +PluginInstall +qall
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+
+Plugin 'christoomey/vim-tmux-navigator'
+
+Plugin 'benmills/vimux'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+set shell=/bin/bash
+
+
+" set leader
+let mapleader="\\"
+
+
+
+
+
+" vim tmux navigator
+let g:tmux_navigator_disable_when_zoomed = 1
+
+
+" airline tab theme
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+
+
+
+" Prompt for a command to run
+map <Leader>vc :VimuxPromptCommand<CR>
+
+" Prompt for a command to run
+"map <Leader>vm :VimuxPromptCommand("make ")<CR>
+map <Leader>vm :VimuxRunCommand("make")<CR>
+
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+" Open pane
+"map <Leader>vo :VimuxOpenRunner<CR>
+
+
 
 
 
@@ -33,21 +67,28 @@
 
 " tab
 map <C-o> :tabnew<CR>
+
+" move tab
 map <SPACE> gt
 map , gT
 
 
 " split view
+
+
+" window navigate
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" simple way to move window
 map <TAB> <C-w><C-w>
 
+" go to shell
 map <CR> :sh<CR>
 
-"map <S-n> :bn<CR>
-"map <S-p> :bp<CR>
 
-" navigate
-map <S-Left> <C-u>
-map <S-Right> <C-d>
 
 nmap <Up> <Up>zz
 nmap <Down> <Down>zz
@@ -68,10 +109,14 @@ set showmatch " brace highlighting
 set tabstop=4
 set background=dark
 
+set smartindent
+set expandtab
+
 "set smarttab
 "set smartindent
 
 set autoread
+
 
 
 
@@ -124,11 +169,11 @@ if has("cscope")
     nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
     nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
-	map <C-k> :cp<CR>
-	map <C-l> :cn<CR>
-	map <C-j> :cw<CR>
-	map <C-g> :set cscopequickfix=s-,c-,d-,i-,t-,e-<CR>
-	map <C-h> :set cscopequickfix=s0,c0,d0,i0,t0,e0<CR>
+"	map <C-k> :cp<CR>
+"	map <C-l> :cn<CR>
+"	map <C-j> :cw<CR>
+"	map <C-g> :set cscopequickfix=s-,c-,d-,i-,t-,e-<CR>
+"	map <C-h> :set cscopequickfix=s0,c0,d0,i0,t0,e0<CR>
 	nmap <C-n>p <C-t>
 endif
 

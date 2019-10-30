@@ -131,3 +131,5 @@ alias cdl='cd "$(\ls -1dt ./*/ | head -n 1)"'
 alias cda='cd "$(\ls -1dar ./*/ | head -n 1)"'
 
 set -o vi
+
+bash -c zsh
