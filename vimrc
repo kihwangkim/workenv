@@ -68,6 +68,9 @@ map <Leader>vl :VimuxRunLastCommand<CR>
 " tab
 map <C-o> :tabnew<CR>
 
+" maximize a tab
+map <C-X> <C-W><C-\|><C-W><C-_>
+
 " move tab
 map <SPACE> gt
 map , gT
