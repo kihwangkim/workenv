@@ -43,9 +43,13 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
 
+"""" VIMUX
 
 " Prompt for a command to run
 map <Leader>vc :VimuxPromptCommand<CR>
+
+" Close
+map <Leader>vq :VimuxPromptCommand<CR>
 
 " Prompt for a command to run
 "map <Leader>vm :VimuxPromptCommand("make ")<CR>
@@ -59,6 +63,17 @@ map <Leader>vl :VimuxRunLastCommand<CR>
 
 
 
+"""" Termdebug
+
+map <Leader>gg :packadd termdebug<CR>:Termdebug<CR>
+" next
+map <Leader>gn :Over<CR>
+" step
+map <Leader>gs :Step<CR>
+map <Leader>gb :Break<CR>
+" delete a break
+map <Leader>gd :Clear<CR>
+map <Leader>gc :Continue<CR>
 
 
 
@@ -69,7 +84,8 @@ map <Leader>vl :VimuxRunLastCommand<CR>
 map <C-o> :tabnew<CR>
 
 " maximize a tab
-map <C-X> <C-W><C-\|><C-W><C-_>
+"map <C-X> <C-W><C-\|><C-W><C-_>
+map <C-X> <C-W>\|<C-W>_
 
 " move tab
 map <SPACE> gt
@@ -89,7 +105,7 @@ nnoremap <C-H> <C-W><C-H>
 map <TAB> <C-w><C-w>
 
 " go to shell
-map <CR> :sh<CR>
+"map <CR> :sh<CR>
 
 
 
@@ -172,11 +188,11 @@ if has("cscope")
     nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
     nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
-"	map <C-k> :cp<CR>
-"	map <C-l> :cn<CR>
-"	map <C-j> :cw<CR>
-"	map <C-g> :set cscopequickfix=s-,c-,d-,i-,t-,e-<CR>
-"	map <C-h> :set cscopequickfix=s0,c0,d0,i0,t0,e0<CR>
+"	map <C-1> :cp<CR>
+"	map <C-2> :cn<CR>
+"	map <C-3> :cw<CR>
+"	map <C-4> :set cscopequickfix=s-,c-,d-,i-,t-,e-<CR>
+"	map <C-5> :set cscopequickfix=s0,c0,d0,i0,t0,e0<CR>
 	nmap <C-n>p <C-t>
 endif
 
