@@ -137,7 +137,15 @@ set expandtab
 set autoread
 
 
+" cursor highlight
+set cursorline
+set cursorcolumn
 
+" stay highlight
+" regist : <Leader>m
+" go : 'm
+" delete : :match
+nnoremap <silent> <Leader>m mm:execute 'match Search /\%'.line('.').'l/'<CR>
 
 
 au BufNewFile,BufRead *.tpp set filetype=cpp
