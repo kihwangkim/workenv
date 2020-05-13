@@ -123,13 +123,11 @@ set cindent
 set history=10000
 set laststatus=2
 " set paste
-set shiftwidth=4 " auto indent width
 set showmatch " brace highlighting
-set tabstop=4
+set tabstop=2
 set background=dark
 
 set smartindent
-set expandtab
 
 "set smarttab
 "set smartindent
