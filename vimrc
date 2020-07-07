@@ -116,21 +116,42 @@ nmap <Down> <Down>zz
 
 
 set hlsearch " searching pattern highlighting
+set smartcase
 set nu " line number
+
+
+
+set nowrap                      " don't wrap lines
+set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
+"set expandtab                   " use spaces, not tabs (optional)
+set backspace=indent,eol,start  " backspace through everything in insert mode
+
 set autoindent
-set si "smart indent
 set cindent
+
+"set si "smart indent
+"set tabstop=4
+"set shiftwidth=4     " indent also with 4 spaces
+"set expandtab
+
+
+
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=52
+
+
+
+
+
+
 set history=10000
 set laststatus=2
 " set paste
 set showmatch " brace highlighting
-set tabstop=2
 set background=dark
 
-set smartindent
 
-"set smarttab
-"set smartindent
 
 set autoread
 
