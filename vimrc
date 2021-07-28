@@ -18,6 +18,7 @@ Plugin 'benmills/vimux'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 't9md/vim-quickhl'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -27,8 +28,7 @@ set shell=/bin/bash
 
 
 " set leader
-let mapleader="\\"
-
+let mapleader=";"
 
 
 
@@ -74,6 +74,23 @@ map <Leader>gb :Break<CR>
 " delete a break
 map <Leader>gd :Clear<CR>
 map <Leader>gc :Continue<CR>
+
+
+"""" quick highlight
+nmap <Leader>w <Plug>(quickhl-manual-this-whole-word)
+xmap <Leader>w <Plug>(quickhl-manual-this-whole-word)
+
+nmap <Leader>n <Plug>(quickhl-manual-go-to-next)
+xmap <Leader>n <Plug>(quickhl-manual-go-to-next)
+
+nmap <Leader>b <Plug>(quickhl-manual-go-to-prev)
+xmap <Leader>b <Plug>(quickhl-manual-go-to-prev)
+
+nmap <Leader>W <Plug>(quickhl-manual-reset)
+xmap <Leader>W <Plug>(quickhl-manual-reset)
+
+nmap <Leader>j <Plug>(quickhl-cword-toggle)
+
 
 
 
@@ -164,7 +181,7 @@ set cursorcolumn
 " regist : <Leader>m
 " go : 'm
 " delete : :match
-nnoremap <silent> <Leader>m mm:execute 'match Search /\%'.line('.').'l/'<CR>
+"nnoremap <silent> <Leader>m mm:execute 'match Search /\%'.line('.').'l/'<CR>
 
 
 au BufNewFile,BufRead *.tpp set filetype=cpp
