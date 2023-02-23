@@ -154,7 +154,7 @@ set cindent
 
 
 
-set colorcolumn=80
+set colorcolumn=80,120
 highlight ColorColumn ctermbg=52
 
 
@@ -167,6 +167,16 @@ set laststatus=2
 " set paste
 set showmatch " brace highlighting
 set background=dark
+
+
+
+
+function Blame() range
+execute '!git blame -L ' . a:firstline . ',' . a:lastline . ' %'
+endfunction
+vnoremap K :call Blame()<CR>
+
+
 
 
 
