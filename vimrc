@@ -99,6 +99,9 @@ nmap <Leader>j <Plug>(quickhl-cword-toggle)
 
 " tab
 map <C-o> :tabnew<CR>
+map <C-p> :tabnew %<CR>
+"map <C-[> :-1tabnew<CR>
+map <C-]> :-1tabnew %<CR>
 
 " maximize a tab
 "map <C-X> <C-W><C-\|><C-W><C-_>
@@ -146,10 +149,10 @@ set backspace=indent,eol,start  " backspace through everything in insert mode
 set autoindent
 set cindent
 
-"set si "smart indent
-"set tabstop=4
-"set shiftwidth=4     " indent also with 4 spaces
-"set expandtab
+set si "smart indent
+set tabstop=4
+set shiftwidth=4     " indent also with 4 spaces
+set expandtab
 
 
 
@@ -177,6 +180,8 @@ endfunction
 vnoremap K :call Blame()<CR>
 
 
+set redrawtime=10000
+
 
 
 
@@ -201,52 +206,4 @@ syntax on
 
 
 
-
-
-
-" cscope
-if has("cscope")
-    set cscopetag
-    set csto=0
-    if filereadable("cscope.out")
-	cs add cscope.out
-    elseif $CSCOPE_DB != ""
-	cs add $CSCOPE_DB
-    endif
-    set cscopeverbose
-
-    nmap <C-n>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-n>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-n>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-n>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-n>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-n>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-    nmap <C-n>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nmap <C-n>d :cs find d ^<C-R>=expand("<cword>")<CR><CR>
-
-    nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
-    nmap <C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
-
-    nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
-    nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
-
-"	map <C-1> :cp<CR>
-"	map <C-2> :cn<CR>
-"	map <C-3> :cw<CR>
-"	map <C-4> :set cscopequickfix=s-,c-,d-,i-,t-,e-<CR>
-"	map <C-5> :set cscopequickfix=s0,c0,d0,i0,t0,e0<CR>
-	nmap <C-n>p <C-t>
-endif
 
